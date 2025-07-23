@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba421fksxcspy"]
+
+[ext_resource type="Script" uid="uid://b2om3tayslxub" path="res://scripts/ghost.gd" id="1_bbnym"]
+[ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="1_l5lq6"]
+[ext_resource type="PackedScene" uid="uid://cwl1ecwsn63r8" path="res://scenes/killzone.tscn" id="2_bbnym"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veat2"]
+atlas = ExtResource("1_l5lq6")
+region = Rect2(36, 25, 18, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mfnq"]
+atlas = ExtResource("1_l5lq6")
+region = Rect2(54, 25, 18, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lv6vd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veat2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mfnq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sv5gc"]
+radius = 4.0
+
+[node name="Ghost" type="Node2D"]
+script = ExtResource("1_bbnym")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lv6vd")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.456726
+
+[node name="killzone" parent="." instance=ExtResource("2_bbnym")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_sv5gc")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(-2, 0)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(-2, 0)
+target_position = Vector2(-10, 0)

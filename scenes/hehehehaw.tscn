@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c442sirqbwi61"]
+
+[ext_resource type="AudioStream" uid="uid://bod1763fund8n" path="res://assets/music/HEHEHEHAW-Sound-effect.mp3" id="1_lj3wq"]
+
+[node name="Hehehehaw" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_lj3wq")
+autoplay = true
+max_distance = 50.0
+bus = &"Music"

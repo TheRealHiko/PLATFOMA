@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnbbo0klt8sgy"]
+
+[ext_resource type="Script" uid="uid://dgk4p814muvuf" path="res://scripts/something.gd" id="1_ofmwd"]
+[ext_resource type="AudioStream" uid="uid://ppfkxiu4b445" path="res://assets/music/something-bad-is-about-to-happen-to-me-made-with-Voicemod.mp3" id="2_aybx0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpori"]
+size = Vector2(352, 12)
+
+[node name="something" type="CharacterBody2D"]
+script = ExtResource("1_ofmwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_fpori")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_aybx0")
+bus = &"SFX"
