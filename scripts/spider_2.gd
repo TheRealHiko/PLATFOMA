@@ -6,7 +6,8 @@ var direction = 1
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 350
+const SPEED = 250
+
 
 
 #

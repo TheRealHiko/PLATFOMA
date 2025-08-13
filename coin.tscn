@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbn0a0smu4q4a"]
+
+[ext_resource type="Texture2D" uid="uid://kqk67b7i0ix7" path="res://assets/coin.png" id="1_d5gmh"]
+
+[node name="COIN" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-53, 0)
+texture = ExtResource("1_d5gmh")
+region_enabled = true
+region_rect = Rect2(0, 0, 17, 16)
