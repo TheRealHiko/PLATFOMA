@@ -8,7 +8,7 @@ var coin_count = 0
 
 func add_point():
 	score += 1
-	score_label.text = "YOU COLLECTED " + str(score) + "/100 COINS"
+	score_label.text = "YOU COLLECTED " + str(score) + "/50 COINS"
 	
 	coin_count += 1
 	coins_label.text = "(" + str(coin_count) + ")"

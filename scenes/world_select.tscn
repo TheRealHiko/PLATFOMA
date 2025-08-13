@@ -1,0 +1,170 @@
+[gd_scene load_steps=4 format=3 uid="uid://drths26ofd0nt"]
+
+[ext_resource type="Script" uid="uid://x5mbndvc1xla" path="res://scripts/world_icon.gd" id="1_vlbqk"]
+
+[sub_resource type="Gradient" id="Gradient_f4q7l"]
+offsets = PackedFloat32Array(0.824561)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vlbqk"]
+gradient = SubResource("Gradient_f4q7l")
+width = 64
+
+[node name="WorldSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WorldIconEasy" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 241.0
+offset_bottom = 233.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_vlbqk")
+
+[node name="Label" type="Label" parent="WorldIconEasy"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -78.0
+offset_right = 242.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 64
+text = "	EASY:1
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="WorldIconEasy"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 233.0
+texture = SubResource("GradientTexture1D_vlbqk")
+
+[node name="WorldIconNormal" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 493.0
+offset_top = 3.0
+offset_right = 734.0
+offset_bottom = 236.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_vlbqk")
+
+[node name="Label" type="Label" parent="WorldIconNormal"]
+layout_mode = 0
+offset_left = -33.0
+offset_top = -78.0
+offset_right = 299.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 64
+text = "	NORMAL:1
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="WorldIconNormal"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 233.0
+texture = SubResource("GradientTexture1D_vlbqk")
+
+[node name="WorldIconInsane" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 493.0
+offset_top = 414.0
+offset_right = 734.0
+offset_bottom = 647.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_vlbqk")
+
+[node name="Label" type="Label" parent="WorldIconInsane"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -74.0
+offset_right = 270.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 64
+text = "	INSANE:1
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="WorldIconInsane"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 233.0
+texture = SubResource("GradientTexture1D_vlbqk")
+
+[node name="WorldIconMedium" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 980.0
+offset_top = 3.0
+offset_right = 1221.0
+offset_bottom = 236.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_vlbqk")
+
+[node name="Label" type="Label" parent="WorldIconMedium"]
+layout_mode = 0
+offset_left = -31.0
+offset_top = -76.0
+offset_right = 279.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 64
+text = "	MILD:3
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="WorldIconMedium"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 233.0
+texture = SubResource("GradientTexture1D_vlbqk")
+
+[node name="WorldIconImpossible" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 980.0
+offset_top = 417.0
+offset_right = 1221.0
+offset_bottom = 650.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_vlbqk")
+
+[node name="Label" type="Label" parent="WorldIconImpossible"]
+layout_mode = 0
+offset_left = -57.0
+offset_top = -85.0
+offset_right = 332.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 64
+text = "	IMPOSSIBLE:6
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="WorldIconImpossible"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 233.0
+texture = SubResource("GradientTexture1D_vlbqk")
+
+[node name="WorldIconHard" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 411.0
+offset_right = 241.0
+offset_bottom = 644.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_vlbqk")
+
+[node name="Label" type="Label" parent="WorldIconHard"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -74.0
+offset_right = 237.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 64
+text = "	HARD:4
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="WorldIconHard"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 233.0
+texture = SubResource("GradientTexture1D_vlbqk")
