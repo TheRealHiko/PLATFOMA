@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://drths26ofd0nt"]
+[gd_scene load_steps=5 format=3 uid="uid://drths26ofd0nt"]
 
 [ext_resource type="Script" uid="uid://x5mbndvc1xla" path="res://scripts/world_icon.gd" id="1_vlbqk"]
+[ext_resource type="Texture2D" uid="uid://sjb5pyich822" path="res://assets/ICONP.png" id="2_qxscb"]
 
 [sub_resource type="Gradient" id="Gradient_f4q7l"]
 offsets = PackedFloat32Array(0.824561)
@@ -168,3 +169,13 @@ layout_mode = 0
 offset_right = 241.0
 offset_bottom = 233.0
 texture = SubResource("GradientTexture1D_vlbqk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -372.0
+offset_top = 203.0
+offset_right = 44.0
+offset_bottom = 459.0
+scale = Vector2(10, 10)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("2_qxscb")
