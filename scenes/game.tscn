@@ -1226,6 +1226,16 @@ theme_override_fonts/font = ExtResource("10_kvpfn")
 theme_override_font_sizes/font_size = 8
 text = "Not Bad"
 
+[node name="Label27" type="Label" parent="Labels"]
+offset_left = 3757.0
+offset_top = -189.0
+offset_right = 3921.0
+offset_bottom = -170.0
+theme_override_colors/font_color = Color(0, 0.739746, 0.206875, 1)
+theme_override_fonts/font = ExtResource("10_kvpfn")
+theme_override_font_sizes/font_size = 8
+text = "Press ESC to go to next lvl"
+
 [node name="Label23" type="Label" parent="Labels"]
 offset_left = 2773.0
 offset_top = 8.0
