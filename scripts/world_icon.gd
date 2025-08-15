@@ -8,15 +8,15 @@ extends Control
 @onready var levels = [
 	{
 		"node": $WorldIconEasy,
-		"scene": "res://scenes/game.tscn"
-	},
-	{
-		"node": $WorldIconNormal,
 		"scene": "res://scenes/game2.tscn"
 	},
 	{
-		"node": $WorldIconInsane,
+		"node": $WorldIconNormal,
 		"scene": "res://scenes/game3.tscn"
+	},
+	{
+		"node": $WorldIconInsane,
+		"scene": "res://scenes/game.tscn"
 	},
 	{
 		"node": $WorldIconMedium,
