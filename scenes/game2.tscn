@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://otvvgvuhd03u" path="res://scenes/COINs.tscn" id="9_yblbm"]
 [ext_resource type="FontFile" uid="uid://tgvsv10ts4xd" path="res://assets/fonts/PixelOperator8.ttf" id="10_s427y"]
 [ext_resource type="PackedScene" uid="uid://0tcf6yyyasli" path="res://scenes/p_platform.tscn" id="11_yblbm"]
-[ext_resource type="PackedScene" uid="uid://t8wgd7r3ipy6" path="res://scenes/coin.tscn" id="12_qyh6i"]
+[ext_resource type="PackedScene" uid="uid://b8roc8ij7cp2x" path="res://scenes/coin2.tscn" id="14_5kdtj"]
 [ext_resource type="PackedScene" uid="uid://cwl1ecwsn63r8" path="res://scenes/killzone.tscn" id="14_erv2c"]
 [ext_resource type="FontFile" uid="uid://b3ym48n8mojxc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="14_w330p"]
 [ext_resource type="Script" uid="uid://dnnkrb7pkwca7" path="res://scripts/game_manager_2.gd" id="15_erv2c"]
@@ -508,8 +508,8 @@ text = "YOU COLLECTED  X/50 COINS"
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("12_qyh6i")]
-position = Vector2(-479, -63)
+[node name="coin2" parent="Coins" instance=ExtResource("14_5kdtj")]
+position = Vector2(-493, -61)
 
 [node name="GaneManager2" type="Node" parent="."]
 script = ExtResource("15_erv2c")
