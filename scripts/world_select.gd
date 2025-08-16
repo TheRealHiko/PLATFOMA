@@ -6,7 +6,7 @@ extends Control
 # Store world icons and scene paths together
 @onready var levels = [
 	{ "node": $WorldIconEasy, "scene": "res://scenes/game2.tscn" },
-	{ "node": $WorldIconNormal, "scene": "res://scenes/game3.tscn" },
+	{ "node": $WorldIconNormal, "scene": "res://scenes/game_3.tscn" },
 	{ "node": $WorldIconInsane, "scene": "res://scenes/game.tscn" },
 	{ "node": $WorldIconMedium, "scene": "res://scenes/game4.tscn" },
 	{ "node": $WorldIconImpossible, "scene": "res://scenes/game5.tscn" },
