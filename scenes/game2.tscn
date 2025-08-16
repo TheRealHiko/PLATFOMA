@@ -528,7 +528,7 @@ position = Vector2(1073, -109)
 position = Vector2(1264, -81)
 
 [node name="PPlatform14" parent="." instance=ExtResource("11_yblbm")]
-position = Vector2(1306, -81)
+position = Vector2(1311, -81)
 
 [node name="PPlatform3" parent="." instance=ExtResource("11_yblbm")]
 position = Vector2(42, -68)
