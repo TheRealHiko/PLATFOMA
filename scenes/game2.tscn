@@ -21,7 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="22_chdjo"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="23_mjadu"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6l82y"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oibj5"]
 texture = ExtResource("2_kh4a2")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -188,12 +188,12 @@ texture = ExtResource("2_kh4a2")
 3:12/0 = 0
 3:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvdov"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_deeqb"]
 texture = ExtResource("3_8j387")
 0:0/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q8fqd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7h7c"]
 texture = ExtResource("4_5dhap")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -364,11 +364,11 @@ texture = ExtResource("4_5dhap")
 10:3/size_in_atlas = Vector2i(3, 3)
 10:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk7sw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hpkv"]
 texture = ExtResource("5_s427y")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqr4r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yam7v"]
 texture = ExtResource("6_yblbm")
 7:5/size_in_atlas = Vector2i(18, 21)
 7:5/0 = 0
@@ -379,11 +379,11 @@ texture = ExtResource("6_yblbm")
 
 [sub_resource type="TileSet" id="TileSet_k1bn8"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_6l82y")
-sources/1 = SubResource("TileSetAtlasSource_dvdov")
-sources/2 = SubResource("TileSetAtlasSource_q8fqd")
-sources/3 = SubResource("TileSetAtlasSource_sk7sw")
-sources/4 = SubResource("TileSetAtlasSource_wqr4r")
+sources/0 = SubResource("TileSetAtlasSource_oibj5")
+sources/1 = SubResource("TileSetAtlasSource_deeqb")
+sources/2 = SubResource("TileSetAtlasSource_q7h7c")
+sources/3 = SubResource("TileSetAtlasSource_1hpkv")
+sources/4 = SubResource("TileSetAtlasSource_yam7v")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5kdtj"]
 
