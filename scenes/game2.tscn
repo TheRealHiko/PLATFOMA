@@ -543,7 +543,7 @@ max_distance = 100.0
 bus = &"SFX"
 
 [node name="GETOUT" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-435, 9)
+position = Vector2(-512, -104)
 stream = ExtResource("22_chdjo")
 autoplay = true
 max_distance = 115.0
