@@ -1,7 +1,10 @@
 [gd_scene load_steps=29 format=3 uid="uid://bqxbic3bdpldn"]
 
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_8ymnf"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/game_3.gd" id="1_qrei7"]
+=======
+>>>>>>> bf67c43673c03dc2027210865f197e40eebe6cd8
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_glory"]
 [ext_resource type="Texture2D" uid="uid://cpjej1o58nq3i" path="res://assets/graveyard.png" id="3_056nt"]
 [ext_resource type="Texture2D" uid="uid://dh8heubbquqr" path="res://assets/grave.png" id="4_88gb1"]
@@ -21,6 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://bod1763fund8n" path="res://assets/music/HEHEHEHAW-Sound-effect.mp3" id="17_tn432"]
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="18_kdrfu"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="19_a85g8"]
+[ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="21_54qwf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lasog"]
 texture = ExtResource("1_8ymnf")
@@ -389,7 +393,6 @@ sources/4 = SubResource("TileSetAtlasSource_5l7mh")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aq334"]
 
 [node name="game3" type="Node2D"]
-script = ExtResource("1_qrei7")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2, 7)
@@ -696,3 +699,6 @@ max_distance = 550.0
 
 [node name="death effect" type="Area2D" parent="."]
 script = ExtResource("13_54qwf")
+
+[node name="Exit" type="Node" parent="."]
+script = ExtResource("21_54qwf")
