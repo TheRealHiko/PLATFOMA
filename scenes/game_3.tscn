@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cries8v6ela2h"]
+[gd_scene load_steps=28 format=3 uid="uid://cries8v6ela2h"]
 
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_2px5s"]
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_cyvdb"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="15_trv5c"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="16_u2sdh"]
 [ext_resource type="PackedScene" uid="uid://bfm6th4v1ivgf" path="res://scenes/s_platform.tscn" id="17_cyvdb"]
+[ext_resource type="PackedScene" uid="uid://b8roc8ij7cp2x" path="res://scenes/coin2.tscn" id="18_pnpoq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cej1y"]
 texture = ExtResource("1_2px5s")
@@ -448,10 +449,10 @@ position = Vector2(4, -22)
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
 
 [node name="Panel" type="Panel" parent="Player/Camera2D/CanvasLayer"]
-offset_left = 4353.0
-offset_top = 11.0
-offset_right = 4596.0
-offset_bottom = 56.0
+offset_left = 901.0
+offset_top = 19.0
+offset_right = 1144.0
+offset_bottom = 64.0
 script = ExtResource("8_1ux0c")
 metadata/_edit_use_anchors_ = true
 
@@ -489,10 +490,10 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="Player/Camera2D/CanvasLayer"]
-offset_left = 4217.0
-offset_top = 11.0
-offset_right = 4341.0
-offset_bottom = 53.0
+offset_left = 765.0
+offset_top = 19.0
+offset_right = 889.0
+offset_bottom = 61.0
 metadata/_edit_use_anchors_ = true
 
 [node name="COIN" parent="Player/Camera2D/CanvasLayer/Panel2" instance=ExtResource("9_22jyt")]
@@ -576,3 +577,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_ab83v")
 }
 autoplay = "move"
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="coin2" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(2963, -50)
