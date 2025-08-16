@@ -198,6 +198,7 @@ _data = {
 }
 
 [node name="coin2" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_r0bd6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -218,3 +219,5 @@ bus = &"SFX"
 libraries = {
 &"": SubResource("AnimationLibrary_1ikuy")
 }
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

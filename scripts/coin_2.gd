@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var game_manager_2: Node = %GameManager2
+@onready var game_manager_2: Node = $"../../GaneManager2"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _on_body_entered(body: Node2D) -> void:
