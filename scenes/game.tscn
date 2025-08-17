@@ -1,5 +1,6 @@
-[gd_scene load_steps=47 format=4 uid="uid://bts6xev3xvien"]
+[gd_scene load_steps=50 format=4 uid="uid://bts6xev3xvien"]
 
+[ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="1_qouja"]
 [ext_resource type="PackedScene" uid="uid://dwn61w0r4mgbt" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dnj0p6swjifsm" path="res://game_manager.gd" id="1_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="2_yqjtg"]
@@ -30,6 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="27_qnb83"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="28_sww3w"]
 [ext_resource type="Script" uid="uid://cmcqmve85vduv" path="res://scripts/panel.gd" id="30_sgl2t"]
+[ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="32_wljb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgl2t"]
 texture = ExtResource("2_yqjtg")
@@ -513,10 +515,14 @@ _data = {
 &"move": SubResource("Animation_ca42v")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
+size = Vector2(44.0082, 29.0695)
+
 [node name="Game" type="Node2D"]
 scale = Vector2(0.999814, 0.996354)
+script = ExtResource("1_qouja")
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_uwrxv")]
 position = Vector2(-458, 21)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("3_suyxu")]
@@ -580,6 +586,15 @@ theme_override_colors/font_color = Color(0.926556, 0.614894, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "(000)"
 horizontal_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="Player/Camera2D/CanvasLayer"]
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 300.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+max_value = 3.0
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -1355,3 +1370,15 @@ bus = &"SFX"
 [node name="WatRrr" parent="." instance=ExtResource("28_sww3w")]
 position = Vector2(3044, -145)
 max_distance = 550.0
+
+[node name="LevelEnd" type="Area2D" parent="."]
+visibility_layer = 2
+position = Vector2(3830.71, -161.589)
+collision_mask = 2
+script = ExtResource("32_wljb1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd"]
+position = Vector2(0, -3.53111)
+shape = SubResource("RectangleShape2D_v2yb1")
+
+[connection signal="body_entered" from="LevelEnd" to="LevelEnd" method="_on_body_entered"]

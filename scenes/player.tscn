@@ -332,6 +332,14 @@ one_shot = true
 wait_time = 0.78
 one_shot = true
 
+[node name="InvincibleTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
 [connection signal="timeout" from="prevoiusfloor" to="." method="_on_prevoiusfloor_timeout"]
 [connection signal="timeout" from="JumpLockout" to="." method="_on_jump_lockout_timeout"]
+[connection signal="timeout" from="InvincibleTimer" to="." method="_on_invincible_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
