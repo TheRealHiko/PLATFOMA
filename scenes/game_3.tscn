@@ -383,6 +383,21 @@ sources/2 = SubResource("TileSetAtlasSource_2ne5d")
 sources/3 = SubResource("TileSetAtlasSource_0s42n")
 sources/4 = SubResource("TileSetAtlasSource_5ik1c")
 
+[sub_resource type="Animation" id="Animation_ibm7l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-18, 27)]
+}
+
 [sub_resource type="Animation" id="Animation_pnpoq"]
 resource_name = "move"
 length = 5.0
@@ -398,21 +413,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-18, 27), Vector2(174, 27)]
-}
-
-[sub_resource type="Animation" id="Animation_ibm7l"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-18, 27)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ab83v"]
@@ -584,3 +584,67 @@ autoplay = "move"
 light_mask = 16
 visibility_layer = 16
 position = Vector2(2963, -50)
+
+[node name="coin3" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(2992, -50)
+
+[node name="coin4" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3055, -23)
+
+[node name="coin5" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3098, -29)
+rotation = 0.0227011
+
+[node name="coin6" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3164, -44)
+rotation = 0.0227011
+
+[node name="coin7" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3210, -43)
+rotation = 0.0227011
+
+[node name="coin8" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3274, -80)
+rotation = 0.0227011
+
+[node name="coin9" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3263, -0.999969)
+rotation = 0.0227011
+
+[node name="coin10" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3289, 84)
+rotation = 0.0227011
+
+[node name="coin11" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3356, 70)
+rotation = 0.0227011
+
+[node name="coin12" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3385, 68)
+rotation = 0.0227011
+
+[node name="coin13" parent="Coins" instance=ExtResource("18_pnpoq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3435, 117)
+rotation = 0.0227011
