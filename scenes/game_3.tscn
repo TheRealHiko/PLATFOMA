@@ -17,10 +17,10 @@
 [ext_resource type="AudioStream" uid="uid://bod1763fund8n" path="res://assets/music/HEHEHEHAW-Sound-effect.mp3" id="14_404ih"]
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="15_trv5c"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="16_u2sdh"]
-[ext_resource type="PackedScene" path="res://scenes/s_platform.tscn" id="17_cyvdb"]
+[ext_resource type="PackedScene" uid="uid://bfm6th4v1ivgf" path="res://scenes/s_platform.tscn" id="17_cyvdb"]
 [ext_resource type="PackedScene" uid="uid://b8roc8ij7cp2x" path="res://scenes/coin2.tscn" id="18_pnpoq"]
 [ext_resource type="PackedScene" uid="uid://cwl1ecwsn63r8" path="res://scenes/killzone.tscn" id="19_ibm7l"]
-[ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="21_h06wj"]
+[ext_resource type="Script" path="res://scripts/level_end.gd" id="21_h06wj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cej1y"]
 texture = ExtResource("1_2px5s")
