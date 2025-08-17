@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://dwjjrxaeu81rv"]
+[gd_scene load_steps=31 format=3 uid="uid://dwjjrxaeu81rv"]
 
+[ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="1_deeqb"]
 [ext_resource type="PackedScene" uid="uid://dwn61w0r4mgbt" path="res://scenes/player.tscn" id="1_xrrf0"]
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="2_kh4a2"]
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="3_8j387"]
@@ -19,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://po5tm83qps06" path="res://assets/music/ytmp3free (mp3cut.net).mp3" id="19_lv1cq"]
 [ext_resource type="AudioStream" uid="uid://bod1763fund8n" path="res://assets/music/HEHEHEHAW-Sound-effect.mp3" id="20_k8i0y"]
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="22_chdjo"]
+[ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="22_q7h7c"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="23_mjadu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oibj5"]
@@ -387,7 +389,11 @@ sources/4 = SubResource("TileSetAtlasSource_yam7v")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5kdtj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hpkv"]
+size = Vector2(44.0082, 29.0695)
+
 [node name="game2" type="Node2D"]
+script = ExtResource("1_deeqb")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2, 7)
@@ -403,7 +409,7 @@ use_parent_material = true
 position = Vector2(26, -60)
 tile_set = SubResource("TileSet_k1bn8")
 
-[node name="Player" parent="." instance=ExtResource("1_xrrf0")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_xrrf0")]
 light_mask = 8
 visibility_layer = 8
 position = Vector2(-458, 21)
@@ -469,6 +475,15 @@ theme_override_colors/font_color = Color(0.926556, 0.614894, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "(000)"
 horizontal_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="Player/Camera2D/CanvasLayer"]
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 300.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+max_value = 3.0
 
 [node name="Label" type="Label" parent="."]
 offset_left = -475.0
@@ -719,3 +734,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_w330p")
 theme_override_font_sizes/font_size = 8
 text = "25"
+
+[node name="LevelEnd" type="Area2D" parent="."]
+visibility_layer = 2
+position = Vector2(1504, -117)
+collision_mask = 2
+script = ExtResource("22_q7h7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd"]
+position = Vector2(0, -3.53111)
+shape = SubResource("RectangleShape2D_1hpkv")
+
+[connection signal="body_entered" from="LevelEnd" to="LevelEnd" method="_on_body_entered"]
