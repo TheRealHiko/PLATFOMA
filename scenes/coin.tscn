@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4y21axc4xfi0" path="res://scripts/coin.gd" id="1_i64fm"]
 [ext_resource type="Texture2D" uid="uid://cfhwp6sudaj88" path="res://assets/coinpis.png" id="2_11l1o"]
-[ext_resource type="AudioStream" uid="uid://ddgpuhmp3oe6x" path="res://assets/sounds/coin.wav" id="3_11l1o"]
+[ext_resource type="AudioStream" uid="uid://cc44i1rr44yvt" path="res://assets/filling-buckets-with-coal-312382 (mp3cut.net).mp3" id="3_11l1o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d14el"]
 atlas = ExtResource("2_11l1o")

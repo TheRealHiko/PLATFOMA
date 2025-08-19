@@ -568,6 +568,15 @@ theme_override_font_sizes/font_size = 36
 text = "00."
 horizontal_alignment = 2
 
+[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 52.0
+offset_right = 242.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 20
+text = "TIME LIMIT -> 3:00:000"
+
 [node name="Panel2" type="Panel" parent="Player/Camera2D/CanvasLayer"]
 offset_left = 768.0
 offset_top = 11.0
@@ -583,7 +592,7 @@ offset_left = 42.0
 offset_top = 1.0
 offset_right = 107.0
 offset_bottom = 40.0
-theme_override_colors/font_color = Color(0.926556, 0.614894, 0, 1)
+theme_override_colors/font_color = Color(0.134501, 0.074331, 2.40654e-08, 1)
 theme_override_font_sizes/font_size = 28
 text = "(000)"
 horizontal_alignment = 1
@@ -902,7 +911,7 @@ position = Vector2(2546, -126)
 position = Vector2(739, -236)
 
 [node name="Spider" parent="." instance=ExtResource("7_u5sy4")]
-position = Vector2(3079.57, -39.1427)
+position = Vector2(3084.57, -41.15)
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -1228,10 +1237,13 @@ text = "Jump off
 "
 
 [node name="Spider2" parent="." instance=ExtResource("7_u5sy4")]
+position = Vector2(566.105, -133.487)
+
+[node name="Spider4" parent="." instance=ExtResource("7_u5sy4")]
 position = Vector2(2460, -38)
 
 [node name="Spider3" parent="." instance=ExtResource("7_u5sy4")]
-position = Vector2(1271, 42)
+position = Vector2(1273.24, 42.1537)
 
 [node name="Platform2" parent="." instance=ExtResource("15_ir15t")]
 position = Vector2(4431, -102)
