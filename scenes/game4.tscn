@@ -542,3 +542,11 @@ bus = &"SFX"
 [node name="WatRrr" parent="." instance=ExtResource("29_j1nn5")]
 position = Vector2(3044, -145)
 max_distance = 550.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -589.0
+offset_top = -54.0
+offset_right = -37.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 48
+text = "UNDER CONSTRUCTION"

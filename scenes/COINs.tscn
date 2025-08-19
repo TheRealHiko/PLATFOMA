@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://otvvgvuhd03u"]
 
-[ext_resource type="Texture2D" uid="uid://kqk67b7i0ix7" path="res://assets/coin.png" id="1_bk4hd"]
+[ext_resource type="Texture2D" uid="uid://cfhwp6sudaj88" path="res://assets/coinpis.png" id="1_bk4hd"]
 
 [node name="COIN" type="Node2D"]
 

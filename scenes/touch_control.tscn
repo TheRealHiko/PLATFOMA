@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4olcm5d3c8pv"]
+
+[ext_resource type="Texture2D" uid="uid://bbgysmp0lkjbd" path="res://assets/Sprites/Style A/Default/direction_left.png" id="1_v71yn"]
+[ext_resource type="Texture2D" uid="uid://dmsueugj1ihtu" path="res://assets/Sprites/Style A/Default/direction_right.png" id="2_jno6r"]
+[ext_resource type="Texture2D" uid="uid://kyg40eg8k2lq" path="res://assets/Sprites/Style A/Default/dpad_element_south.png" id="3_jl6ep"]
+[ext_resource type="Texture2D" uid="uid://kyitdkt015y6" path="res://assets/Sprites/Highlights B/Default/direction_left_highlight.png" id="4_501le"]
+[ext_resource type="Texture2D" uid="uid://6nu7ueqoa487" path="res://assets/Sprites/Highlights B/Default/direction_right_highlight.png" id="5_sf84s"]
+[ext_resource type="Texture2D" uid="uid://bthbqdlfc6rly" path="res://assets/Sprites/Style A/Default/joystick_circle_pad_d.png" id="6_kju6r"]
+[ext_resource type="Texture2D" uid="uid://chx34q1i65b5f" path="res://assets/Sprites/Style A/Default/joystick_hexagon_nub_c.png" id="7_tymkp"]
+
+[node name="TouchControl" type="CanvasLayer"]
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(498, 810)
+scale = Vector2(2.70313, 2.64062)
+texture_normal = ExtResource("1_v71yn")
+action = "move_left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(788, 806)
+scale = Vector2(2.89063, 2.70313)
+texture_normal = ExtResource("2_jno6r")
+action = "move_right"
+
+[node name="jump" type="TouchScreenButton" parent="."]
+position = Vector2(1478, 818)
+scale = Vector2(3.375, 2.76563)
+texture_normal = ExtResource("3_jl6ep")
+action = "jump"
+
+[node name="vileft" type="TouchScreenButton" parent="."]
+position = Vector2(1210, 851)
+scale = Vector2(1.32813, 0.578125)
+texture_normal = ExtResource("4_501le")
+action = "vi_left"
+
+[node name="viright" type="TouchScreenButton" parent="."]
+position = Vector2(1301, 848)
+scale = Vector2(1.40625, 0.5625)
+texture_normal = ExtResource("5_sf84s")
+action = "vi_right"
+
+[node name="exit" type="TouchScreenButton" parent="."]
+position = Vector2(1738, 909)
+rotation = 1.11079e-05
+scale = Vector2(1.58808, 0.546963)
+texture_normal = ExtResource("6_kju6r")
+action = "exit"
+
+[node name="Label" type="Label" parent="exit"]
+offset_left = 21.7688
+offset_top = 39.9991
+offset_right = 113.769
+offset_bottom = 147.999
+theme_override_font_sizes/font_size = 32
+text = "BACK"
+metadata/_edit_use_anchors_ = true
+
+[node name="select" type="TouchScreenButton" parent="."]
+position = Vector2(1209, 908)
+scale = Vector2(2.95313, 1.20313)
+texture_normal = ExtResource("7_tymkp")
+action = "vi_accept"
+
+[node name="Label" type="Label" parent="select"]
+offset_left = 5.0
+offset_top = 17.0
+offset_right = 68.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 16
+text = "SELECT"
+metadata/_edit_use_anchors_ = true

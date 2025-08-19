@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://drths26ofd0nt"]
+[gd_scene load_steps=82 format=3 uid="uid://drths26ofd0nt"]
 
 [ext_resource type="Script" uid="uid://b5lyuhqmyd1hh" path="res://scripts/world_select.gd" id="1_ppnh1"]
 [ext_resource type="Script" uid="uid://x5mbndvc1xla" path="res://scripts/world_icon.gd" id="1_vlbqk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cpyun71ei4xyk" path="res://assets/Executioner/idle.png" id="6_bojee"]
 [ext_resource type="Texture2D" uid="uid://c8mbflmjnqd3" path="res://assets/Executioner/skill1.png" id="7_iwhwa"]
 [ext_resource type="Texture2D" uid="uid://d2ysatcjkduv5" path="res://assets/Executioner/summon.png" id="8_sxwe3"]
+[ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="9_wx471"]
 
 [sub_resource type="Gradient" id="Gradient_f4q7l"]
 offsets = PackedFloat32Array(0.824561)
@@ -872,3 +873,13 @@ libraries = {
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 338.0
+offset_right = 1161.0
+offset_bottom = 663.0
+
+[node name="TouchControl" parent="Control" instance=ExtResource("9_wx471")]
