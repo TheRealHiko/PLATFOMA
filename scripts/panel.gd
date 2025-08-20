@@ -12,6 +12,7 @@ var scene_time_limits = {
 	"res://scenes/game_3.tscn": 150,
 	"res://scenes/game.tscn": 180,
 	"res://scenes/game4.tscn": 240,
+	"res://scenes/game5.tscn": 300,
 }
 
 @onready var player: CharacterBody2D = $"../../.."
