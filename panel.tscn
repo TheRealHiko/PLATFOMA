@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://p2gq43r1m3u8"]
+
+[ext_resource type="Script" uid="uid://cmcqmve85vduv" path="res://scripts/panel.gd" id="1_y26ic"]
+
+[node name="Panel" type="Panel"]
+offset_left = 904.0
+offset_top = 11.0
+offset_right = 1147.0
+offset_bottom = 56.0
+script = ExtResource("1_y26ic")
+
+[node name="Minutes" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -5.0
+offset_right = 89.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 36
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Msecs" type="Label" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = -5.0
+offset_right = 206.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 36
+text = "     000"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = -5.0
+offset_right = 144.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 36
+text = "00."
+horizontal_alignment = 2
+
+[node name="KillTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="KillTimer" to="." method="_on_kill_timer_timeout"]
