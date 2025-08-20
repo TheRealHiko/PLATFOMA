@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl4gnq3teqy4o"]
+
+[ext_resource type="Script" uid="uid://u0ocg2vqb035" path="res://scripts/angel.gd" id="1_6gyu6"]
+[ext_resource type="Texture2D" uid="uid://bt27l41ql2wgj" path="res://assets/aaaa-removebg-preview.png" id="1_mtvsi"]
+[ext_resource type="PackedScene" uid="uid://cbpowj5roat71" path="res://scenes/killzone_2.tscn" id="2_6gyu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_deem3"]
+atlas = ExtResource("1_mtvsi")
+region = Rect2(366, 0, 122, 202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gyu6"]
+atlas = ExtResource("1_mtvsi")
+region = Rect2(122, 0, 122, 202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whldq"]
+atlas = ExtResource("1_mtvsi")
+region = Rect2(244, 0, 122, 202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_whldq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_deem3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gyu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whldq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 23.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_deem3"]
+radius = 4.47214
+
+[node name="Angek" type="Node2D"]
+script = ExtResource("1_6gyu6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -16)
+scale = Vector2(0.209016, 0.180693)
+sprite_frames = SubResource("SpriteFrames_whldq")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.0820645
+flip_h = true
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(1, -7)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -7)
+target_position = Vector2(-10, 0)
+
+[node name="killzone2" parent="." instance=ExtResource("2_6gyu6")]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="killzone2"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_deem3")
