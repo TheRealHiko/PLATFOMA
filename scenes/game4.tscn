@@ -22,7 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="28_yy23m"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="29_j1nn5"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q6vi4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4h3d"]
 texture = ExtResource("5_8i4u8")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -189,12 +189,12 @@ texture = ExtResource("5_8i4u8")
 3:12/0 = 0
 3:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndhlp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q6vi4"]
 texture = ExtResource("6_n4d13")
 0:0/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0lbi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndhlp"]
 texture = ExtResource("7_as6h0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -365,11 +365,11 @@ texture = ExtResource("7_as6h0")
 10:3/size_in_atlas = Vector2i(3, 3)
 10:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fuptv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0lbi"]
 texture = ExtResource("8_pq5x4")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2m3yr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fuptv"]
 texture = ExtResource("9_hxyk5")
 7:5/size_in_atlas = Vector2i(18, 21)
 7:5/0 = 0
@@ -380,11 +380,11 @@ texture = ExtResource("9_hxyk5")
 
 [sub_resource type="TileSet" id="TileSet_1drk1"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_q6vi4")
-sources/1 = SubResource("TileSetAtlasSource_ndhlp")
-sources/2 = SubResource("TileSetAtlasSource_c0lbi")
-sources/3 = SubResource("TileSetAtlasSource_fuptv")
-sources/4 = SubResource("TileSetAtlasSource_2m3yr")
+sources/0 = SubResource("TileSetAtlasSource_p4h3d")
+sources/1 = SubResource("TileSetAtlasSource_q6vi4")
+sources/2 = SubResource("TileSetAtlasSource_ndhlp")
+sources/3 = SubResource("TileSetAtlasSource_c0lbi")
+sources/4 = SubResource("TileSetAtlasSource_fuptv")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f7pjl"]
 
@@ -424,6 +424,7 @@ offset_top = 11.0
 offset_right = 1147.0
 offset_bottom = 56.0
 script = ExtResource("3_d6lih")
+metadata/_edit_use_anchors_ = true
 
 [node name="Minutes" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
 layout_mode = 0
@@ -434,6 +435,7 @@ offset_bottom = 45.0
 theme_override_font_sizes/font_size = 36
 text = "00:"
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Msecs" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
 layout_mode = 0
@@ -444,6 +446,7 @@ offset_bottom = 45.0
 theme_override_font_sizes/font_size = 36
 text = "     000"
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Seconds" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
 layout_mode = 0
@@ -454,6 +457,7 @@ offset_bottom = 45.0
 theme_override_font_sizes/font_size = 36
 text = "00."
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
 layout_mode = 0
@@ -463,12 +467,14 @@ offset_right = 242.0
 offset_bottom = 85.0
 theme_override_font_sizes/font_size = 20
 text = "TIME LIMIT -> 4:00:000"
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="Player/Camera2D/CanvasLayer"]
 offset_left = 768.0
 offset_top = 11.0
 offset_right = 892.0
 offset_bottom = 53.0
+metadata/_edit_use_anchors_ = true
 
 [node name="COIN" parent="Player/Camera2D/CanvasLayer/Panel2" instance=ExtResource("4_ya8at")]
 position = Vector2(60, 5)
@@ -483,6 +489,7 @@ theme_override_colors/font_color = Color(0.926556, 0.614894, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "(000)"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="HealthBar" type="ProgressBar" parent="Player/Camera2D/CanvasLayer"]
 offset_left = 13.0
@@ -492,6 +499,7 @@ offset_bottom = 32.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
 max_value = 3.0
+metadata/_edit_use_anchors_ = true
 
 [node name="PPlatform" parent="." instance=ExtResource("10_750kx")]
 position = Vector2(-160, 72)
@@ -526,6 +534,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("17_thtfk")
 theme_override_font_sizes/font_size = 8
 text = "YOU COLLECTED  X/50 COINS"
+metadata/_edit_use_anchors_ = true
 
 [node name="Restart" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_bbxeh")
