@@ -391,6 +391,7 @@ sources/4 = SubResource("TileSetAtlasSource_from8")
 size = Vector2(44.0082, 29.0695)
 
 [node name="game5" type="Node2D"]
+position = Vector2(358, 217)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2, 7)
