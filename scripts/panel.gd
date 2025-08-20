@@ -8,7 +8,7 @@ var killed: bool = false   # prevent multiple kills
 
 # Scene-specific limits
 var scene_time_limits = {
-	"res://scenes/game2.tscn": 60,
+	"res://scenes/game2.tscn": 90,
 	"res://scenes/game_3.tscn": 150,
 	"res://scenes/game.tscn": 180,
 	"res://scenes/game4.tscn": 240,

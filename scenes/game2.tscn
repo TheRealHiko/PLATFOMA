@@ -20,8 +20,8 @@
 [ext_resource type="AudioStream" uid="uid://po5tm83qps06" path="res://assets/music/ytmp3free (mp3cut.net).mp3" id="19_lv1cq"]
 [ext_resource type="AudioStream" uid="uid://bod1763fund8n" path="res://assets/music/HEHEHEHAW-Sound-effect.mp3" id="20_k8i0y"]
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="22_chdjo"]
-[ext_resource type="Script" path="res://scripts/level_end.gd" id="22_q7h7c"]
-[ext_resource type="PackedScene" path="res://scenes/touch_control.tscn" id="23_1hpkv"]
+[ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="22_q7h7c"]
+[ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="23_1hpkv"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="23_mjadu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oibj5"]
