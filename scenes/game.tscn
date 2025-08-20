@@ -31,8 +31,8 @@
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="27_qnb83"]
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="28_sww3w"]
 [ext_resource type="Script" uid="uid://cmcqmve85vduv" path="res://scripts/panel.gd" id="30_sgl2t"]
-[ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="32_wljb1"]
-[ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="33_v2yb1"]
+[ext_resource type="Script" path="res://scripts/level_end.gd" id="32_wljb1"]
+[ext_resource type="PackedScene" path="res://scenes/touch_control.tscn" id="33_v2yb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgl2t"]
 texture = ExtResource("2_yqjtg")
