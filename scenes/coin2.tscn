@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csugevpdknhp" path="res://scripts/coin_2.gd" id="1_r0bd6"]
 [ext_resource type="Texture2D" uid="uid://cfhwp6sudaj88" path="res://assets/coinpis.png" id="2_bq4yt"]
-[ext_resource type="AudioStream" uid="uid://ddgpuhmp3oe6x" path="res://assets/sounds/coin.wav" id="2_r0bd6"]
+[ext_resource type="AudioStream" uid="uid://cc44i1rr44yvt" path="res://assets/filling-buckets-with-coal-312382 (mp3cut.net).mp3" id="3_r0bd6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_npqh4"]
 atlas = ExtResource("2_bq4yt")
@@ -213,7 +213,7 @@ position = Vector2(70, 72)
 shape = SubResource("CircleShape2D_npqh4")
 
 [node name="Coin" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_r0bd6")
+stream = ExtResource("3_r0bd6")
 bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

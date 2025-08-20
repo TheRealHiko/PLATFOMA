@@ -653,6 +653,14 @@ text = "00."
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
+offset_left = 5.0
+offset_top = 52.0
+offset_right = 242.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 20
+text = "TIME LIMIT -> 2:30:000"
+
 [node name="Panel2" type="Panel" parent="Player/Camera2D/CanvasLayer"]
 offset_left = 765.0
 offset_top = 19.0
@@ -669,7 +677,7 @@ offset_left = 42.0
 offset_top = 1.0
 offset_right = 107.0
 offset_bottom = 40.0
-theme_override_colors/font_color = Color(0.926556, 0.614894, 0, 1)
+theme_override_colors/font_color = Color(0.133333, 0.0745098, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "(000)"
 horizontal_alignment = 1
@@ -1012,12 +1020,6 @@ rotation = 0.0227011
 light_mask = 16
 visibility_layer = 16
 position = Vector2(6526, -79)
-rotation = 0.0227011
-
-[node name="coin31" parent="Coins" instance=ExtResource("18_pnpoq")]
-light_mask = 16
-visibility_layer = 16
-position = Vector2(3436, 116)
 rotation = 0.0227011
 
 [node name="killzone" parent="." instance=ExtResource("19_ibm7l")]
