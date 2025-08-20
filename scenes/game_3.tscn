@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://b8roc8ij7cp2x" path="res://scenes/coin2.tscn" id="18_pnpoq"]
 [ext_resource type="PackedScene" uid="uid://cwl1ecwsn63r8" path="res://scenes/killzone.tscn" id="19_ibm7l"]
 [ext_resource type="Script" path="res://scripts/level_end.gd" id="21_h06wj"]
-[ext_resource type="PackedScene" path="res://scenes/touch_control.tscn" id="22_8ipfs"]
+[ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="22_8ipfs"]
 [ext_resource type="FontFile" uid="uid://tgvsv10ts4xd" path="res://assets/fonts/PixelOperator8.ttf" id="23_1ux0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cej1y"]
@@ -654,6 +654,7 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 52.0
 offset_right = 242.0
