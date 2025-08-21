@@ -830,6 +830,9 @@ script = ExtResource("18_55f1e")
 [node name="Platform5" parent="." instance=ExtResource("19_ay1hi")]
 position = Vector2(394, 24)
 
+[node name="Platform56" parent="." instance=ExtResource("19_ay1hi")]
+position = Vector2(2095, -24)
+
 [node name="Platform6" parent="." instance=ExtResource("19_ay1hi")]
 position = Vector2(983, 2)
 
