@@ -719,7 +719,6 @@ position = Vector2(-138, 41)
 stream = ExtResource("25_vadu8")
 volume_db = 24.0
 max_distance = 100000.0
-bus = &"Death"
 
 [node name="Hehehaw" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(6364, -105)
