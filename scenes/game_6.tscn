@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://1vyueu5eprvr"]
+[gd_scene load_steps=27 format=3 uid="uid://cm3puohiht7np"]
 
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_frbt8"]
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_7flif"]
@@ -688,6 +688,8 @@ position = Vector2(97, -187)
 anchors_preset = -1
 anchor_left = 0.0269097
 anchor_top = 0.00308642
+anchor_right = 0.0269097
+anchor_bottom = 0.00308642
 offset_left = 6014.0
 offset_top = -174.0
 offset_right = 6270.0
