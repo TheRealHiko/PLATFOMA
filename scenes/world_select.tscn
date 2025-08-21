@@ -856,7 +856,7 @@ offset_bottom = 454.0
 scale = Vector2(0.74142, 0.74144)
 theme_override_colors/font_color = Color(0.156863, 0.00392157, 0.415686, 1)
 theme_override_font_sizes/font_size = 64
-text = "EXTREME:6"
+text = "BOSS:6"
 horizontal_alignment = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -878,8 +878,8 @@ autoplay = "idle"
 layout_mode = 3
 anchors_preset = 0
 offset_left = 39.0
-offset_top = 338.0
+offset_top = 21.0
 offset_right = 1161.0
-offset_bottom = 663.0
+offset_bottom = 346.0
 
 [node name="TouchControl" parent="Control" instance=ExtResource("9_wx471")]
