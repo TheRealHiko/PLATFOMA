@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="19_g1j5t"]
 [ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="20_lmt0k"]
 [ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="22_78suy"]
-[ext_resource type="PackedScene" path="res://scenes/angel.tscn" id="23_w4jem"]
+[ext_resource type="PackedScene" uid="uid://bl4gnq3teqy4o" path="res://scenes/angel.tscn" id="23_w4jem"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="24_kofi7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kofi7"]
@@ -814,6 +814,21 @@ _data = {
 &"RESET": SubResource("Animation_6amo7")
 }
 
+[sub_resource type="Animation" id="Animation_i1ira"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2974, -180)]
+}
+
 [sub_resource type="Animation" id="Animation_s22l1"]
 resource_name = "move"
 loop_mode = 2
@@ -828,21 +843,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2974, -180), Vector2(2926, -85)]
-}
-
-[sub_resource type="Animation" id="Animation_i1ira"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2974, -180)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0sovw"]
@@ -965,6 +965,21 @@ _data = {
 &"move": SubResource("Animation_csmkf")
 }
 
+[sub_resource type="Animation" id="Animation_uagga"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4334, -21)]
+}
+
 [sub_resource type="Animation" id="Animation_nlsrp"]
 resource_name = "move"
 length = 10.0
@@ -980,21 +995,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(4334, -21), Vector2(5270, 133), Vector2(5687, -14), Vector2(5714, -14), Vector2(5713, -66), Vector2(5839, -35)]
-}
-
-[sub_resource type="Animation" id="Animation_uagga"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(4334, -21)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sjc2l"]
@@ -1633,21 +1633,6 @@ light_mask = 16
 visibility_layer = 16
 position = Vector2(-497, -59)
 
-[node name="coin3" parent="Coins" instance=ExtResource("12_wh1aq")]
-light_mask = 16
-visibility_layer = 16
-position = Vector2(-448, -91)
-
-[node name="coin4" parent="Coins" instance=ExtResource("12_wh1aq")]
-light_mask = 16
-visibility_layer = 16
-position = Vector2(-385, -123)
-
-[node name="coin5" parent="Coins" instance=ExtResource("12_wh1aq")]
-light_mask = 16
-visibility_layer = 16
-position = Vector2(-65, -284)
-
 [node name="coin25" parent="Coins" instance=ExtResource("12_wh1aq")]
 light_mask = 16
 visibility_layer = 16
@@ -1833,6 +1818,16 @@ light_mask = 16
 visibility_layer = 16
 position = Vector2(4048, -174)
 
+[node name="coin75" parent="Coins" instance=ExtResource("12_wh1aq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3601, -205)
+
+[node name="coin76" parent="Coins" instance=ExtResource("12_wh1aq")]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(3693, -204)
+
 [node name="coin74" parent="Coins" instance=ExtResource("12_wh1aq")]
 light_mask = 16
 visibility_layer = 16
@@ -2009,7 +2004,7 @@ metadata/_edit_use_anchors_ = true
 stream = ExtResource("15_ba5pl")
 volume_db = 5.423
 autoplay = true
-bus = &"Music"
+bus = &"SFX"
 
 [node name="GlobalDeathSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-138, 41)

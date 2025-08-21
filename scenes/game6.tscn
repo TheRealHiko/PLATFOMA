@@ -703,7 +703,7 @@ metadata/_edit_use_anchors_ = true
 stream = ExtResource("15_12isw")
 volume_db = 5.423
 autoplay = true
-bus = &"Music"
+bus = &"SFX"
 
 [node name="GlobalDeathSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-138, 41)
