@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dotbmrhakqeil"]
+[gd_scene load_steps=34 format=3 uid="uid://dotbmrhakqeil"]
 
 [ext_resource type="PackedScene" uid="uid://dwn61w0r4mgbt" path="res://scenes/player.tscn" id="1_c01th"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="1_g2riq"]
@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://dr5dv8e513bkx" path="res://gane_manager_2.tscn" id="13_p4h3d"]
 [ext_resource type="FontFile" uid="uid://b3ym48n8mojxc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="17_thtfk"]
 [ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="21_p4h3d"]
+[ext_resource type="PackedScene" uid="uid://c3u6aiw55t34y" path="res://scenes/animatable_body_2ffd.tscn" id="23_ndhlp"]
 [ext_resource type="AudioStream" uid="uid://pdsgt2hr03b2" path="res://assets/music/ytmp3free (mp3cut.net) (1).mp3" id="24_bbxeh"]
+[ext_resource type="PackedScene" uid="uid://crc3r24v5x1w0" path="res://scenes/platform_4.tscn" id="24_c0lbi"]
 [ext_resource type="AudioStream" uid="uid://po5tm83qps06" path="res://assets/music/ytmp3free (mp3cut.net).mp3" id="25_vadu8"]
 [ext_resource type="AudioStream" uid="uid://bod1763fund8n" path="res://assets/music/HEHEHEHAW-Sound-effect.mp3" id="26_4rkin"]
 [ext_resource type="AudioStream" uid="uid://dymvk3kdsefjj" path="res://assets/ytmp3free.cc_what-is-the-frontman-doing-squidgameedit-squidgame2-frontman-meme-getout-youtubemp3free.org.mp3" id="28_yy23m"]
@@ -747,5 +749,11 @@ script = ExtResource("21_p4h3d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd"]
 position = Vector2(0, -3.53111)
 shape = SubResource("RectangleShape2D_q6vi4")
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("23_ndhlp")]
+position = Vector2(158, -292)
+
+[node name="Platform5" parent="." instance=ExtResource("24_c0lbi")]
+position = Vector2(190, -292)
 
 [connection signal="body_entered" from="LevelEnd" to="LevelEnd" method="_on_body_entered"]
