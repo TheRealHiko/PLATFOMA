@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="19_g1j5t"]
 [ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="20_lmt0k"]
 [ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="22_78suy"]
-[ext_resource type="PackedScene" uid="uid://bl4gnq3teqy4o" path="res://scenes/angel.tscn" id="23_w4jem"]
+[ext_resource type="PackedScene" path="res://scenes/angel.tscn" id="23_w4jem"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="24_kofi7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kofi7"]
