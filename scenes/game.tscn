@@ -1359,7 +1359,6 @@ bus = &"SFX"
 stream = ExtResource("24_e1j6l")
 volume_db = 24.0
 max_distance = 100000.0
-bus = &"Death"
 
 [node name="Hehehaw" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(6364, -105)
