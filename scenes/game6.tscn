@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://1vyueu5eprvr"]
+[gd_scene load_steps=29 format=3 uid="uid://1vyueu5eprvr"]
 
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_884u8"]
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_ay1hi"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="17_e3lfu"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="18_55f1e"]
 [ext_resource type="PackedScene" uid="uid://crc3r24v5x1w0" path="res://scenes/platform_4.tscn" id="19_ay1hi"]
+[ext_resource type="PackedScene" uid="uid://mwarq3ta6fpe" path="res://scenes/executionerboss.tscn" id="21_sduve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3nku"]
 texture = ExtResource("1_884u8")
@@ -574,7 +575,7 @@ use_parent_material = true
 position = Vector2(26, -60)
 tile_set = SubResource("TileSet_gsf2u")
 
-[node name="Player" parent="." instance=ExtResource("7_vbmvp")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("7_vbmvp")]
 light_mask = 8
 visibility_layer = 8
 position = Vector2(-416, 11)
@@ -816,10 +817,10 @@ max_distance = 100000.0
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 39.0
-offset_top = 338.0
-offset_right = 1161.0
-offset_bottom = 663.0
+offset_left = 605.0
+offset_top = 519.0
+offset_right = 1727.0
+offset_bottom = 844.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchControl" parent="Control" instance=ExtResource("17_e3lfu")]
@@ -982,3 +983,6 @@ position = Vector2(8108, -296)
 
 [node name="Platform52" parent="." instance=ExtResource("19_ay1hi")]
 position = Vector2(8224, -241)
+
+[node name="ExecutionerBoss" parent="." instance=ExtResource("21_sduve")]
+position = Vector2(-562, -22)
