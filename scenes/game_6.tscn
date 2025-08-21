@@ -576,10 +576,10 @@ tile_set = SubResource("TileSet_gsf2u")
 [node name="Player" parent="." instance=ExtResource("7_014wk")]
 light_mask = 8
 visibility_layer = 8
-position = Vector2(-454, 22)
+position = Vector2(-416, 11)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("8_acksp")]
-position = Vector2(4, -22)
+position = Vector2(5.81448, -25.803)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
 
