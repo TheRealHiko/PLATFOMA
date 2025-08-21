@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dlql4n24hp32f"]
+[gd_scene load_steps=77 format=3 uid="uid://dlql4n24hp32f"]
 
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_ynyan"]
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_ism2u"]
@@ -776,6 +776,44 @@ _data = {
 &"moved": SubResource("Animation_4i86l")
 }
 
+[sub_resource type="Animation" id="Animation_4sogh"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 1.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2634, -100), Vector2(2812, -140)]
+}
+
+[sub_resource type="Animation" id="Animation_qwcef"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2634, -100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kcta0"]
+_data = {
+&"RESET": SubResource("Animation_qwcef"),
+&"move": SubResource("Animation_4sogh")
+}
+
 [sub_resource type="Animation" id="Animation_ae5ek"]
 resource_name = "move"
 length = 2.0
@@ -825,10 +863,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 1.91),
+"times": PackedFloat32Array(0.133333, 1.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2479, -157), Vector2(2634, -100)]
+"values": [Vector2(2634, -100), Vector2(2479, -157)]
 }
 
 [sub_resource type="Animation" id="Animation_y78as"]
@@ -1244,6 +1282,15 @@ position = Vector2(1302, -345)
 
 [node name="PPlatform11" parent="." instance=ExtResource("10_r2vty")]
 position = Vector2(1574, -47)
+
+[node name="PPlatform22" parent="." instance=ExtResource("10_r2vty")]
+position = Vector2(2634, -100)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PPlatform22"]
+libraries = {
+&"": SubResource("AnimationLibrary_kcta0")
+}
+autoplay = "move"
 
 [node name="PPlatform21" parent="." instance=ExtResource("10_r2vty")]
 position = Vector2(2634, -100)
