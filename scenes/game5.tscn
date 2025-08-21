@@ -1139,7 +1139,7 @@ tile_set = SubResource("TileSet_qenos")
 [node name="Player" parent="." instance=ExtResource("6_3jhb2")]
 light_mask = 8
 visibility_layer = 8
-position = Vector2(-454, 22)
+position = Vector2(6054, -7)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("7_k8na4")]
 position = Vector2(4, -22)
@@ -1282,6 +1282,9 @@ position = Vector2(1302, -345)
 
 [node name="PPlatform11" parent="." instance=ExtResource("10_r2vty")]
 position = Vector2(1574, -47)
+
+[node name="PPlatform23" parent="." instance=ExtResource("10_r2vty")]
+position = Vector2(2974, -180)
 
 [node name="PPlatform22" parent="." instance=ExtResource("10_r2vty")]
 position = Vector2(2634, -100)
@@ -1814,5 +1817,14 @@ position = Vector2(1660, -104)
 
 [node name="exit" type="Node2D" parent="."]
 script = ExtResource("24_kofi7")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 6160.0
+offset_top = -135.0
+offset_right = 6200.0
+offset_bottom = -112.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_rvlk4")
+theme_override_font_sizes/font_size = 8
 
 [connection signal="body_entered" from="LevelEnd" to="LevelEnd" method="_on_body_entered"]
