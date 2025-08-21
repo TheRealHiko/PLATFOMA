@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bl4gnq3teqy4o" path="res://scenes/angel.tscn" id="23_w4jem"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="24_kofi7"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02cc8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kofi7"]
 texture = ExtResource("1_ynyan")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -192,12 +192,12 @@ texture = ExtResource("1_ynyan")
 3:12/0 = 0
 3:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esa27"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jhb2"]
 texture = ExtResource("2_ism2u")
 0:0/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urb0i"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k8na4"]
 texture = ExtResource("3_78suy")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -368,11 +368,11 @@ texture = ExtResource("3_78suy")
 10:3/size_in_atlas = Vector2i(3, 3)
 10:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_exton"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gswb"]
 texture = ExtResource("4_w4jem")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_from8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7lrd"]
 texture = ExtResource("5_kofi7")
 7:5/size_in_atlas = Vector2i(18, 21)
 7:5/0 = 0
@@ -381,7 +381,7 @@ texture = ExtResource("5_kofi7")
 1:11/0 = 0
 0:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78suy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r2vty"]
 texture = ExtResource("6_ism2u")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -554,12 +554,12 @@ texture = ExtResource("6_ism2u")
 
 [sub_resource type="TileSet" id="TileSet_qenos"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_02cc8")
-sources/1 = SubResource("TileSetAtlasSource_esa27")
-sources/2 = SubResource("TileSetAtlasSource_urb0i")
-sources/3 = SubResource("TileSetAtlasSource_exton")
-sources/4 = SubResource("TileSetAtlasSource_from8")
-sources/5 = SubResource("TileSetAtlasSource_78suy")
+sources/0 = SubResource("TileSetAtlasSource_kofi7")
+sources/1 = SubResource("TileSetAtlasSource_3jhb2")
+sources/2 = SubResource("TileSetAtlasSource_k8na4")
+sources/3 = SubResource("TileSetAtlasSource_1gswb")
+sources/4 = SubResource("TileSetAtlasSource_k7lrd")
+sources/5 = SubResource("TileSetAtlasSource_r2vty")
 
 [sub_resource type="Animation" id="Animation_w4jem"]
 length = 0.001
@@ -776,6 +776,21 @@ _data = {
 &"moved": SubResource("Animation_4i86l")
 }
 
+[sub_resource type="Animation" id="Animation_qwcef"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2634, -100)]
+}
+
 [sub_resource type="Animation" id="Animation_4sogh"]
 resource_name = "move"
 length = 2.0
@@ -793,7 +808,13 @@ tracks/0/keys = {
 "values": [Vector2(2634, -100), Vector2(2812, -140)]
 }
 
-[sub_resource type="Animation" id="Animation_qwcef"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kcta0"]
+_data = {
+&"RESET": SubResource("Animation_qwcef"),
+&"move": SubResource("Animation_4sogh")
+}
+
+[sub_resource type="Animation" id="Animation_i5835"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -806,12 +827,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(2634, -100)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kcta0"]
-_data = {
-&"RESET": SubResource("Animation_qwcef"),
-&"move": SubResource("Animation_4sogh")
 }
 
 [sub_resource type="Animation" id="Animation_ae5ek"]
@@ -831,7 +846,13 @@ tracks/0/keys = {
 "values": [Vector2(2634, -100), Vector2(2634, -198)]
 }
 
-[sub_resource type="Animation" id="Animation_i5835"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4sogh"]
+_data = {
+&"RESET": SubResource("Animation_i5835"),
+&"move": SubResource("Animation_ae5ek")
+}
+
+[sub_resource type="Animation" id="Animation_y78as"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -843,13 +864,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2634, -100)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4sogh"]
-_data = {
-&"RESET": SubResource("Animation_i5835"),
-&"move": SubResource("Animation_ae5ek")
+"values": [Vector2(2479, -157)]
 }
 
 [sub_resource type="Animation" id="Animation_csmkf"]
@@ -867,21 +882,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2634, -100), Vector2(2479, -157)]
-}
-
-[sub_resource type="Animation" id="Animation_y78as"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2479, -157)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwcef"]
@@ -1767,7 +1767,6 @@ position = Vector2(-138, 41)
 stream = ExtResource("16_8jwtp")
 volume_db = 24.0
 max_distance = 100000.0
-bus = &"Death"
 
 [node name="Hehehaw" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(5269, 30)
