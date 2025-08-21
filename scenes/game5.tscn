@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bpphpr34x0t3v" path="res://scenes/wat_r.tscn" id="19_g1j5t"]
 [ext_resource type="Script" uid="uid://bytreiye7lovy" path="res://scripts/level_end.gd" id="20_lmt0k"]
 [ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="22_78suy"]
-[ext_resource type="PackedScene" uid="uid://bl4gnq3teqy4o" path="res://scenes/angel.tscn" id="23_w4jem"]
+[ext_resource type="PackedScene" path="res://scenes/angel.tscn" id="23_w4jem"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="24_kofi7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02cc8"]
@@ -776,6 +776,21 @@ _data = {
 &"moved": SubResource("Animation_4i86l")
 }
 
+[sub_resource type="Animation" id="Animation_i5835"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2634, -100)]
+}
+
 [sub_resource type="Animation" id="Animation_ae5ek"]
 resource_name = "move"
 length = 2.0
@@ -793,7 +808,13 @@ tracks/0/keys = {
 "values": [Vector2(2634, -100), Vector2(2634, -198)]
 }
 
-[sub_resource type="Animation" id="Animation_i5835"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4sogh"]
+_data = {
+&"RESET": SubResource("Animation_i5835"),
+&"move": SubResource("Animation_ae5ek")
+}
+
+[sub_resource type="Animation" id="Animation_y78as"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -805,13 +826,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2634, -100)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4sogh"]
-_data = {
-&"RESET": SubResource("Animation_i5835"),
-&"move": SubResource("Animation_ae5ek")
+"values": [Vector2(2479, -157)]
 }
 
 [sub_resource type="Animation" id="Animation_csmkf"]
@@ -829,21 +844,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2479, -157), Vector2(2634, -100)]
-}
-
-[sub_resource type="Animation" id="Animation_y78as"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2479, -157)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwcef"]
@@ -1720,7 +1720,6 @@ position = Vector2(-138, 41)
 stream = ExtResource("16_8jwtp")
 volume_db = 24.0
 max_distance = 100000.0
-bus = &"Death"
 
 [node name="Hehehaw" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(5269, 30)
