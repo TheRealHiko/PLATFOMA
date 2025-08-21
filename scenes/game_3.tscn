@@ -710,14 +710,16 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Restart" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_mnjdk")
+volume_db = 5.333
 autoplay = true
 bus = &"SFX"
 
 [node name="GlobalDeathSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-138, 41)
 stream = ExtResource("13_chu0c")
+volume_db = 24.0
 max_distance = 100000.0
-bus = &"SFX"
+bus = &"Death"
 
 [node name="Hehehaw" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(6364, -105)

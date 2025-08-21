@@ -214,6 +214,7 @@ shape = SubResource("CircleShape2D_npqh4")
 
 [node name="Coin" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_r0bd6")
+volume_db = -6.0
 bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

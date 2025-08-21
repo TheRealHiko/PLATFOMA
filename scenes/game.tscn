@@ -1351,13 +1351,15 @@ bus = &"Music"
 
 [node name="Restart" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_e1j6l")
+volume_db = 5.0
 autoplay = true
 bus = &"SFX"
 
 [node name="GlobalDeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_e1j6l")
+volume_db = 24.0
 max_distance = 100000.0
-bus = &"SFX"
+bus = &"Death"
 
 [node name="Hehehaw" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(6364, -105)
