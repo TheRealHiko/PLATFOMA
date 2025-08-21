@@ -1826,5 +1826,6 @@ offset_bottom = -112.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_rvlk4")
 theme_override_font_sizes/font_size = 8
+text = "70"
 
 [connection signal="body_entered" from="LevelEnd" to="LevelEnd" method="_on_body_entered"]

@@ -1,26 +1,26 @@
-[gd_scene load_steps=27 format=3 uid="uid://cea7j8ys5hxrw"]
+[gd_scene load_steps=27 format=3 uid="uid://dvyvrueh2qsbb"]
 
-[ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_frbt8"]
-[ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_7flif"]
-[ext_resource type="Texture2D" uid="uid://cpjej1o58nq3i" path="res://assets/graveyard.png" id="3_hqeby"]
-[ext_resource type="Texture2D" uid="uid://dh8heubbquqr" path="res://assets/grave.png" id="4_hc1h0"]
-[ext_resource type="Texture2D" uid="uid://c1x4lxya26ey1" path="res://assets/a.png" id="5_au3is"]
-[ext_resource type="Texture2D" uid="uid://dhdv2tdclsypx" path="res://assets/heben.png" id="6_vx6nd"]
-[ext_resource type="PackedScene" uid="uid://dwn61w0r4mgbt" path="res://scenes/player.tscn" id="7_014wk"]
-[ext_resource type="PackedScene" uid="uid://beanxr0nwpbkw" path="res://scenes/camera_2d.tscn" id="8_acksp"]
-[ext_resource type="Script" uid="uid://cmcqmve85vduv" path="res://scripts/panel.gd" id="9_5tn0i"]
-[ext_resource type="PackedScene" uid="uid://otvvgvuhd03u" path="res://scenes/COINs.tscn" id="10_4wsu3"]
-[ext_resource type="PackedScene" uid="uid://cwl1ecwsn63r8" path="res://scenes/killzone.tscn" id="11_5v8rn"]
-[ext_resource type="PackedScene" uid="uid://b8roc8ij7cp2x" path="res://scenes/coin2.tscn" id="12_ddmtm"]
-[ext_resource type="PackedScene" uid="uid://dr5dv8e513bkx" path="res://gane_manager_2.tscn" id="13_n67a8"]
-[ext_resource type="FontFile" uid="uid://b3ym48n8mojxc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="14_5gyyy"]
-[ext_resource type="AudioStream" uid="uid://pdsgt2hr03b2" path="res://assets/music/ytmp3free (mp3cut.net) (1).mp3" id="15_r84f0"]
-[ext_resource type="AudioStream" uid="uid://po5tm83qps06" path="res://assets/music/ytmp3free (mp3cut.net).mp3" id="16_h15l6"]
-[ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="17_kpr27"]
-[ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="18_vltxd"]
+[ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_884u8"]
+[ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_ay1hi"]
+[ext_resource type="Texture2D" uid="uid://cpjej1o58nq3i" path="res://assets/graveyard.png" id="3_3effl"]
+[ext_resource type="Texture2D" uid="uid://dh8heubbquqr" path="res://assets/grave.png" id="4_sduve"]
+[ext_resource type="Texture2D" uid="uid://c1x4lxya26ey1" path="res://assets/a.png" id="5_tdjt6"]
+[ext_resource type="Texture2D" uid="uid://dhdv2tdclsypx" path="res://assets/heben.png" id="6_m1fxr"]
+[ext_resource type="PackedScene" uid="uid://dwn61w0r4mgbt" path="res://scenes/player.tscn" id="7_vbmvp"]
+[ext_resource type="PackedScene" uid="uid://beanxr0nwpbkw" path="res://scenes/camera_2d.tscn" id="8_etr1y"]
+[ext_resource type="Script" uid="uid://cmcqmve85vduv" path="res://scripts/panel.gd" id="9_spcy5"]
+[ext_resource type="PackedScene" uid="uid://otvvgvuhd03u" path="res://scenes/COINs.tscn" id="10_y4ga7"]
+[ext_resource type="PackedScene" uid="uid://cwl1ecwsn63r8" path="res://scenes/killzone.tscn" id="11_nvfl4"]
+[ext_resource type="PackedScene" uid="uid://b8roc8ij7cp2x" path="res://scenes/coin2.tscn" id="12_g8e28"]
+[ext_resource type="PackedScene" uid="uid://dr5dv8e513bkx" path="res://gane_manager_2.tscn" id="13_nf5ra"]
+[ext_resource type="FontFile" uid="uid://b3ym48n8mojxc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="14_qhjfe"]
+[ext_resource type="AudioStream" uid="uid://pdsgt2hr03b2" path="res://assets/music/ytmp3free (mp3cut.net) (1).mp3" id="15_12isw"]
+[ext_resource type="AudioStream" uid="uid://po5tm83qps06" path="res://assets/music/ytmp3free (mp3cut.net).mp3" id="16_8xakw"]
+[ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="17_e3lfu"]
+[ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="18_55f1e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3nku"]
-texture = ExtResource("1_frbt8")
+texture = ExtResource("1_884u8")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -187,12 +187,12 @@ texture = ExtResource("1_frbt8")
 3:13/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eiq0k"]
-texture = ExtResource("2_7flif")
+texture = ExtResource("2_ay1hi")
 0:0/0 = 0
 3:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n221b"]
-texture = ExtResource("3_hqeby")
+texture = ExtResource("3_3effl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -363,11 +363,11 @@ texture = ExtResource("3_hqeby")
 10:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svsyo"]
-texture = ExtResource("4_hc1h0")
+texture = ExtResource("4_sduve")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hq748"]
-texture = ExtResource("5_au3is")
+texture = ExtResource("5_tdjt6")
 7:5/size_in_atlas = Vector2i(18, 21)
 7:5/0 = 0
 3:10/0 = 0
@@ -376,7 +376,7 @@ texture = ExtResource("5_au3is")
 0:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5jku4"]
-texture = ExtResource("6_vx6nd")
+texture = ExtResource("6_m1fxr")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -572,12 +572,12 @@ use_parent_material = true
 position = Vector2(26, -60)
 tile_set = SubResource("TileSet_gsf2u")
 
-[node name="Player" parent="." instance=ExtResource("7_014wk")]
+[node name="Player" parent="." instance=ExtResource("7_vbmvp")]
 light_mask = 8
 visibility_layer = 8
 position = Vector2(-454, 22)
 
-[node name="Camera2D" parent="Player" instance=ExtResource("8_acksp")]
+[node name="Camera2D" parent="Player" instance=ExtResource("8_etr1y")]
 position = Vector2(4, -22)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
@@ -587,7 +587,7 @@ offset_left = 904.0
 offset_top = 11.0
 offset_right = 1147.0
 offset_bottom = 56.0
-script = ExtResource("9_5tn0i")
+script = ExtResource("9_spcy5")
 metadata/_edit_use_anchors_ = true
 
 [node name="Minutes" type="Label" parent="Player/Camera2D/CanvasLayer/Panel"]
@@ -630,7 +630,7 @@ offset_top = 52.0
 offset_right = 242.0
 offset_bottom = 85.0
 theme_override_font_sizes/font_size = 20
-text = "TIME LIMIT -> 5:00:000"
+text = "TIME LIMIT -> 7:07:077"
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="Player/Camera2D/CanvasLayer"]
@@ -640,7 +640,7 @@ offset_right = 892.0
 offset_bottom = 53.0
 metadata/_edit_use_anchors_ = true
 
-[node name="COIN" parent="Player/Camera2D/CanvasLayer/Panel2" instance=ExtResource("10_4wsu3")]
+[node name="COIN" parent="Player/Camera2D/CanvasLayer/Panel2" instance=ExtResource("10_y4ga7")]
 position = Vector2(60, 5)
 
 [node name="COINS" type="Label" parent="Player/Camera2D/CanvasLayer/Panel2"]
@@ -665,7 +665,7 @@ theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
 max_value = 3.0
 metadata/_edit_use_anchors_ = true
 
-[node name="killzone" parent="." instance=ExtResource("11_5v8rn")]
+[node name="killzone" parent="." instance=ExtResource("11_nvfl4")]
 position = Vector2(110, 33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
@@ -674,12 +674,12 @@ shape = SubResource("WorldBoundaryShape2D_y5bh8")
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="coin6" parent="Coins" instance=ExtResource("12_ddmtm")]
+[node name="coin6" parent="Coins" instance=ExtResource("12_g8e28")]
 light_mask = 16
 visibility_layer = 16
 position = Vector2(97, -187)
 
-[node name="GaneManager2" parent="." instance=ExtResource("13_n67a8")]
+[node name="GaneManager2" parent="." instance=ExtResource("13_nf5ra")]
 
 [node name="labels" type="Node" parent="."]
 
@@ -687,25 +687,27 @@ position = Vector2(97, -187)
 anchors_preset = -1
 anchor_left = 0.0269097
 anchor_top = 0.00308642
+anchor_right = 0.0269097
+anchor_bottom = 0.00308642
 offset_left = 6014.0
 offset_top = -174.0
 offset_right = 6270.0
 offset_bottom = -138.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("14_5gyyy")
+theme_override_fonts/font = ExtResource("14_qhjfe")
 theme_override_font_sizes/font_size = 8
 text = "YOU COLLECTED  X/100 COINS"
 metadata/_edit_use_anchors_ = true
 
 [node name="Restart" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("15_r84f0")
+stream = ExtResource("15_12isw")
 volume_db = 5.423
 autoplay = true
 bus = &"Music"
 
 [node name="GlobalDeathSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-138, 41)
-stream = ExtResource("16_h15l6")
+stream = ExtResource("16_8xakw")
 volume_db = 24.0
 max_distance = 100000.0
 
@@ -718,7 +720,7 @@ offset_right = 1161.0
 offset_bottom = 663.0
 metadata/_edit_use_anchors_ = true
 
-[node name="TouchControl" parent="Control" instance=ExtResource("17_kpr27")]
+[node name="TouchControl" parent="Control" instance=ExtResource("17_e3lfu")]
 
 [node name="exit" type="Node2D" parent="."]
-script = ExtResource("18_vltxd")
+script = ExtResource("18_55f1e")
