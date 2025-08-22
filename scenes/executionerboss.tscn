@@ -1,15 +1,20 @@
-[gd_scene load_steps=74 format=3 uid="uid://mwarq3ta6fpe"]
+[gd_scene load_steps=89 format=3 uid="uid://mwarq3ta6fpe"]
 
 [ext_resource type="Texture2D" uid="uid://cpyun71ei4xyk" path="res://assets/Executioner/idle.png" id="1_envsc"]
 [ext_resource type="Texture2D" uid="uid://bvliryff0mljf" path="res://assets/Executioner/attacking.png" id="2_vyd4x"]
 [ext_resource type="Texture2D" uid="uid://7forys7ea4tt" path="res://assets/Executioner/death.png" id="3_vajqp"]
 [ext_resource type="Texture2D" uid="uid://c8mbflmjnqd3" path="res://assets/Executioner/skill1.png" id="4_ma7vi"]
 [ext_resource type="Texture2D" uid="uid://d2ysatcjkduv5" path="res://assets/Executioner/summon.png" id="5_w7xdk"]
+[ext_resource type="Texture2D" uid="uid://ow3q60x3gtmh" path="res://assets/Executioner/idle2.png" id="6_mshfe"]
 [ext_resource type="FontFile" uid="uid://tgvsv10ts4xd" path="res://assets/fonts/PixelOperator8.ttf" id="6_mt2cy"]
 [ext_resource type="Script" uid="uid://b8tsrff7x2wt1" path="res://scripts/finite_state_machine.gd" id="7_vajqp"]
-[ext_resource type="Script" uid="uid://c6sugn4en4vdx" path="res://scripts/state.gd" id="7_vyd4x"]
 [ext_resource type="Script" uid="uid://cg1se1lm3xjn0" path="res://scripts/idle.gd" id="8_ma7vi"]
 [ext_resource type="Script" uid="uid://73cgbbuss2q2" path="res://scripts/follow.gd" id="9_w7xdk"]
+[ext_resource type="Script" uid="uid://cui6umqqo6ctu" path="res://scripts/attack.gd" id="10_mt2cy"]
+[ext_resource type="Script" uid="uid://ofmmc4ooi2p8" path="res://scripts/death.gd" id="12_tv7kh"]
+[ext_resource type="Script" uid="uid://cb024jekfmnea" path="res://scripts/teleport.gd" id="13_mpqfa"]
+[ext_resource type="Script" uid="uid://b3craorxbk621" path="res://scripts/spawn_minion.gd" id="14_mpqfa"]
+[ext_resource type="PackedScene" uid="uid://cbpowj5roat71" path="res://scenes/killzone_2.tscn" id="15_2itma"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85cd2"]
 atlas = ExtResource("1_envsc")
@@ -215,6 +220,38 @@ region = Rect2(300, 0, 100, 100)
 atlas = ExtResource("5_w7xdk")
 region = Rect2(0, 100, 100, 100)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_soedb"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_teh1c"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e553u"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4qx7"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6rvq"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6srp5"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqf64"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb1ra"]
+atlas = ExtResource("6_mshfe")
+region = Rect2(300, 100, 100, 100)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_mshfe"]
 animations = [{
 "frames": [{
@@ -399,6 +436,35 @@ animations = [{
 "loop": true,
 "name": &"summon",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_soedb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_teh1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e553u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4qx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6rvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6srp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqf64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb1ra")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
 }]
 
 [sub_resource type="Animation" id="Animation_envsc"]
@@ -496,6 +562,37 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_mshfe"]
+resource_name = "boss_defeated"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Label2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_ma7vi"]
@@ -615,35 +712,34 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_mshfe"]
-resource_name = "boss_defeated"
-length = 3.0
+[sub_resource type="Animation" id="Animation_o4oqp"]
+resource_name = "walk"
+length = 0.60001
+loop_mode = 2
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("UI/Label2:self_modulate")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 2.2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
 }
-tracks/1/type = "method"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".")
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2.1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"queue_free"
-}]
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vyd4x"]
@@ -655,7 +751,8 @@ _data = {
 &"death": SubResource("Animation_ma7vi"),
 &"idle": SubResource("Animation_g00oq"),
 &"skill": SubResource("Animation_w7xdk"),
-&"summon": SubResource("Animation_mt2cy")
+&"summon": SubResource("Animation_mt2cy"),
+&"walk": SubResource("Animation_o4oqp")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tv7kh"]
@@ -665,8 +762,12 @@ height = 52.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpqfa"]
 size = Vector2(248, 174)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_e21t0"]
+radius = 4.47214
+
 [node name="ExecutionerBoss" type="CharacterBody2D"]
-collision_layer = 4
+position = Vector2(67, 45)
+collision_layer = 2
 collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -739,16 +840,16 @@ script = ExtResource("8_ma7vi")
 script = ExtResource("9_w7xdk")
 
 [node name="Attack" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("7_vyd4x")
+script = ExtResource("10_mt2cy")
 
 [node name="Death" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("7_vyd4x")
+script = ExtResource("12_tv7kh")
 
 [node name="Teleport" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("7_vyd4x")
+script = ExtResource("13_mpqfa")
 
 [node name="SpawnMinion" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("7_vyd4x")
+script = ExtResource("14_mpqfa")
 
 [node name="debug" type="Label" parent="."]
 offset_left = -23.0
@@ -756,5 +857,12 @@ offset_top = -55.0
 offset_right = 26.0
 offset_bottom = -32.0
 text = "debug"
+
+[node name="killzone2" parent="." instance=ExtResource("15_2itma")]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="killzone2"]
+position = Vector2(-6, 3)
+scale = Vector2(1.61133, -6.07604)
+shape = SubResource("CircleShape2D_e21t0")
 
 [connection signal="body_entered" from="PlayerDetector" to="FiniteStateMachine/Idle" method="_on_player_detector_body_entered"]

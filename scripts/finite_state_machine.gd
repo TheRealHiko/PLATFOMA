@@ -5,8 +5,6 @@ var previous_state: PlayerState
 @onready var debug_label: Label = $"../debug"
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
-
-
 func _ready():
 	print("FSM ready. Children of FSM:")
 	for child in get_children():
@@ -53,3 +51,11 @@ func change_state(state_name: String, anim_name: String = "") -> void:
 func _update_debug() -> void:
 	if debug_label:
 		debug_label.text = "Current State: " + current_state.name
+
+# 🔑 This is the missing piece:
+func _physics_process(delta: float) -> void:
+	if current_state:
+		# Let the state do its movement/logic
+		current_state._physics_process(delta)
+		# Then let the state decide if it should switch
+		current_state.transition()

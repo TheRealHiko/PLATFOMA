@@ -1,18 +1,14 @@
 extends Node2D
 class_name PlayerState
 
-# Adjust these paths based on your scene tree
-@onready var player = get_parent().get_parent().get_node_or_null("Player")
-var animation_player: AnimationPlayer = null
+@onready var debug = owner.find_child("debug")
+@onready var player = get_tree().get_first_node_in_group("player")
+@onready var animation_player = owner.find_child("AnimationPlayer")
 
-
-func _ready() -> void:
+func _ready():
 	set_physics_process(false)
-	print("Loaded state: ", name)
-	print("Player ref: ", player)
-	print("AnimationPlayer ref: ", animation_player)
 
-func enter(anim_name: String = "") -> void:
+func enter(anim_name: String = "skill") -> void:
 	set_physics_process(true)
 	if animation_player and anim_name != "":
 		animation_player.play(anim_name)
@@ -23,5 +19,7 @@ func exit() -> void:
 func transition() -> void:
 	pass
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	transition()
+	if debug:
+		debug.text = name

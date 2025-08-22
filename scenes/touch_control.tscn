@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://chx34q1i65b5f" path="res://assets/Sprites/Style A/Default/joystick_hexagon_nub_c.png" id="7_tymkp"]
 
 [node name="TouchControl" type="CanvasLayer"]
+visible = false
 
 [node name="left" type="TouchScreenButton" parent="."]
 position = Vector2(290, 810)

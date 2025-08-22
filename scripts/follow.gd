@@ -1,32 +1,27 @@
 extends PlayerState
 
+@export var speed: float = 37.0
+@export var attack_distance: float = 50.0
+@export var teleport_distance: float = 125.0
 
-func _enter_tree() -> void:
-	randomize()
+var can_tp_minion: bool = true
 
-func enter(anim_name: String = "") -> void:
-	super.enter(anim_name)   # Pass the anim_name up (default "" if unused)
-	owner.set_physics_process(true)
-	if animation_player:
-		animation_player.play("idle")
-
-func exit() -> void:
-	super.exit()
-	owner.set_physics_process(false)
+func _physics_process(delta: float) -> void:
+	if not player:
+		return
+	var direction = (player.global_position - owner.global_position).normalized()
+	owner.global_position += direction * speed * delta
+	if animation_player and not animation_player.is_playing():
+		animation_player.play("walk")
 
 func transition() -> void:
-	var player = get_tree().get_first_node_in_group("player")  # lowercase group
-	if player == null:
+	if not player:
 		return
-
-	var direction = player.global_position - owner.global_position
-
-	if direction.length() < 40:
+	var dist = (player.global_position - owner.global_position).length()
+	if dist < attack_distance:
 		get_parent().change_state("Attack")
-	elif direction.length() > 150:
-		var chance = randi() % 2
-		match chance:
-			0:
-				get_parent().change_state("SpawnMinion")
-			1:
-				get_parent().change_state("Teleport")
+	elif dist > teleport_distance and can_tp_minion:
+		get_parent().change_state("SpawnMinion")
+		can_tp_minion = false
+	elif dist <= teleport_distance:
+		can_tp_minion = true

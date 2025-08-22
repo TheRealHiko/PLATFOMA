@@ -985,4 +985,4 @@ position = Vector2(8108, -296)
 position = Vector2(8224, -241)
 
 [node name="ExecutionerBoss" parent="." instance=ExtResource("21_sduve")]
-position = Vector2(-562, -22)
+position = Vector2(-498, -3)
