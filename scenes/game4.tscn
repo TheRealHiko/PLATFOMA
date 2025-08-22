@@ -1024,10 +1024,11 @@ rotation = -0.785398
 [node name="labels" type="Node" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="labels"]
-offset_left = 79.0
-offset_top = -115.0
-offset_right = 335.0
-offset_bottom = -79.0
+offset_left = 563.585
+offset_top = -115.066
+offset_right = 819.585
+offset_bottom = -79.0662
+scale = Vector2(1.19676, 1.1853)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("17_thtfk")
 theme_override_font_sizes/font_size = 8
