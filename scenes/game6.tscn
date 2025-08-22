@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://1vyueu5eprvr"]
+[gd_scene load_steps=29 format=3 uid="uid://dtbmacqo42ksa"]
 
 [ext_resource type="Texture2D" uid="uid://bwacd44351bvx" path="res://assets/pixil-layer-Background.png" id="1_884u8"]
 [ext_resource type="Texture2D" uid="uid://cwe40y4d2vfw7" path="res://assets/pixil-frame-0 (3).png" id="2_ay1hi"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b4olcm5d3c8pv" path="res://scenes/touch_control.tscn" id="17_e3lfu"]
 [ext_resource type="Script" uid="uid://cb8rstjpr8fld" path="res://scripts/exit.gd" id="18_55f1e"]
 [ext_resource type="PackedScene" uid="uid://crc3r24v5x1w0" path="res://scenes/platform_4.tscn" id="19_ay1hi"]
-[ext_resource type="PackedScene" uid="uid://mwarq3ta6fpe" path="res://scenes/executionerboss.tscn" id="21_sduve"]
+[ext_resource type="PackedScene" path="res://scenes/executionerboss.tscn" id="21_sduve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3nku"]
 texture = ExtResource("1_884u8")
