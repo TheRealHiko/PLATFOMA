@@ -560,7 +560,7 @@ sources/5 = SubResource("TileSetAtlasSource_5jku4")
 [node name="game6" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-2, 7)
+position = Vector2(2, 7)
 tile_set = SubResource("TileSet_gsf2u")
 format = 2
 layer_0/name = "Background"

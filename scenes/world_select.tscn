@@ -877,9 +877,9 @@ autoplay = "idle"
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 39.0
-offset_top = 21.0
-offset_right = 1161.0
-offset_bottom = 346.0
+offset_left = 68.0
+offset_top = -92.0
+offset_right = 1190.0
+offset_bottom = 233.0
 
 [node name="TouchControl" parent="Control" instance=ExtResource("9_wx471")]
